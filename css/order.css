@@ -9,7 +9,7 @@
 
 .order-wrapper {
   display: grid;
-  grid-template-columns: 1.2fr 0.8fr;
+  grid-template-columns: minmax(0, 1.3fr) minmax(320px, 0.7fr);
   gap: 40px;
   align-items: start;
 }
@@ -20,6 +20,9 @@
   border: 1px solid var(--color-border);
   border-radius: var(--radius-md);
   padding: 40px;
+  min-width: 0;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .order-form-title {
@@ -63,6 +66,8 @@
 .form-select,
 .form-textarea {
   width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
   padding: 12px 16px;
   border-radius: var(--radius-sm);
   background-color: var(--color-input-bg);
@@ -71,6 +76,8 @@
   font-family: var(--font-body);
   font-size: 0.95rem;
   transition: border-color var(--transition-fast), background-color var(--transition-fast);
+  overflow-wrap: anywhere;
+  word-break: break-word;
 }
 
 .form-input:focus,
@@ -100,14 +107,20 @@
   display: block;
 }
 
-/* Auto-expanding inputs (Địa chỉ & Ghi chú tự nở 2-3 dòng) */
+/* Auto-expanding inputs (Địa chỉ & Ghi chú tự nở 2-3 dòng, không vỡ layout) */
 .form-auto-expand {
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
   resize: none;
   min-height: 48px;
   max-height: 105px;
   line-height: 1.5;
   overflow-y: hidden;
-  field-sizing: content;
+  overflow-x: hidden;
+  overflow-wrap: anywhere;
+  word-break: break-word;
+  white-space: pre-wrap;
   transition: border-color var(--transition-fast), background-color var(--transition-fast), height 0.12s ease;
 }
 
@@ -275,6 +288,9 @@
   padding: 32px;
   position: sticky;
   top: calc(var(--header-height) + 24px);
+  min-width: 320px;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .summary-title {
@@ -545,5 +561,6 @@
 
   .order-summary-card {
     position: static;
+    min-width: 0;
   }
 }

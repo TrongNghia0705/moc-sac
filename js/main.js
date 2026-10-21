@@ -9,6 +9,8 @@ import { initOrder } from './order.js';
 import { initFAQ } from './faq.js';
 
 document.addEventListener('DOMContentLoaded', () => {
+  document.documentElement.classList.add('has-js');
+
   // Initialize Core Modules
   initTheme();
   initNavigation();
