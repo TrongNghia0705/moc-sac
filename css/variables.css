@@ -1,0 +1,68 @@
+/* ==========================================================================
+   MỘC SẮC - KHUNG TRANH TIỂU CẢNH
+   Design Tokens & Theme Variables
+   ========================================================================== */
+
+:root {
+  /* Typography */
+  --font-heading: 'Playfair Display', Georgia, serif;
+  --font-body: 'Be Vietnam Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  
+  /* Layout & Spacing */
+  --container-max-width: 1200px;
+  --header-height: 80px;
+  --radius-sm: 6px;
+  --radius-md: 12px;
+  --radius-lg: 18px;
+  --radius-full: 9999px;
+  
+  /* Transitions */
+  --transition-fast: 0.18s ease;
+  --transition-normal: 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  --transition-slow: 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+  
+  /* Shadows (Only subtle elevation for floating elements & modals) */
+  --shadow-dropdown: 0 10px 30px rgba(0, 0, 0, 0.08);
+  --shadow-modal: 0 25px 60px rgba(0, 0, 0, 0.22);
+}
+
+/* Light Mode (Default) */
+:root,
+[data-theme="light"] {
+  --color-bg: #EAE3D2;
+  --color-card: #F5F1E6;
+  --color-card-hover: #FAF7F0;
+  --color-text: #3B4028;
+  --color-text-muted: #61674A;
+  --color-accent: #8B5A2B;
+  --color-accent-hover: #734921;
+  --color-accent-text: #FFFFFF;
+  --color-border: #D8CFBA;
+  --color-border-focus: #8B5A2B;
+  --color-input-bg: #FAF7F0;
+  --color-badge-bg: #E2DAC6;
+  --color-badge-text: #3B4028;
+  --color-nav-bg: rgba(234, 227, 210, 0.94);
+  --color-success: #2E5A36;
+  --color-success-bg: #E6EFE6;
+}
+
+/* Dark Mode */
+[data-theme="dark"] {
+  --color-bg: #3B4028;
+  --color-card: #2E331F;
+  --color-card-hover: #353B24;
+  --color-text: #EAE3D2;
+  --color-text-muted: #B8B3A0;
+  --color-accent: #E6A15C;
+  --color-accent-hover: #F2B374;
+  --color-accent-text: #241A0E;
+  --color-border: #4D5337;
+  --color-border-focus: #E6A15C;
+  --color-input-bg: #262B19;
+  --color-badge-bg: #474E32;
+  --color-badge-text: #EAE3D2;
+  --color-nav-bg: rgba(59, 64, 40, 0.94);
+  --color-success: #A3D9A5;
+  --color-success-bg: #1F3824;
+}

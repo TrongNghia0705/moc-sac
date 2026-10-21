@@ -1,0 +1,13 @@
+{
+  "name": "moc-sac",
+  "version": "1.0.0",
+  "description": "Mộc Sắc - Khung tranh tiểu cảnh Landing Page",
+  "type": "module",
+  "scripts": {
+    "dev": "node server.js",
+    "start": "node server.js"
+  },
+  "keywords": ["landing-page", "moc-sac"],
+  "author": "Mộc Sắc",
+  "license": "ISC"
+}

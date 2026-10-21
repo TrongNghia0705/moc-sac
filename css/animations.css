@@ -1,0 +1,47 @@
+/* ==========================================================================
+   MỘC SẮC - KHUNG TRANH TIỂU CẢNH
+   Micro-interactions, Entrance Animations & Accessibility
+   ========================================================================== */
+
+/* Entrance Animation Classes */
+.fade-in-up {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1), transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.fade-in-up.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Stagger delays */
+.delay-1 { transition-delay: 0.1s; }
+.delay-2 { transition-delay: 0.2s; }
+.delay-3 { transition-delay: 0.3s; }
+
+/* Subtle Glow on Button Hover in Dark Mode */
+[data-theme="dark"] .btn:hover {
+  box-shadow: 0 4px 20px rgba(230, 161, 92, 0.25);
+}
+
+[data-theme="light"] .btn:hover {
+  box-shadow: 0 4px 16px rgba(139, 90, 43, 0.18);
+}
+
+/* Accessibility: Respect Reduced Motion */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+
+  .fade-in-up {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+}

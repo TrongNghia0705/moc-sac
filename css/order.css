@@ -1,0 +1,549 @@
+/* ==========================================================================
+   MỘC SẮC - KHUNG TRANH TIỂU CẢNH
+   Order Form, Calculator & Confirmation Modal
+   ========================================================================== */
+
+.order-section {
+  background-color: var(--color-bg);
+}
+
+.order-wrapper {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 40px;
+  align-items: start;
+}
+
+/* Order Form Container */
+.order-form-container {
+  background-color: var(--color-card);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: 40px;
+}
+
+.order-form-title {
+  font-family: var(--font-heading);
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: var(--color-text);
+  margin-bottom: 8px;
+}
+
+.order-form-desc {
+  font-size: 0.92rem;
+  color: var(--color-text-muted);
+  margin-bottom: 32px;
+}
+
+/* Form Groups & Inputs */
+.form-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.form-label {
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: var(--color-text);
+}
+
+.form-label .required {
+  color: #D32F2F;
+}
+
+.form-input,
+.form-select,
+.form-textarea {
+  width: 100%;
+  padding: 12px 16px;
+  border-radius: var(--radius-sm);
+  background-color: var(--color-input-bg);
+  border: 1.5px solid var(--color-border);
+  color: var(--color-text);
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  transition: border-color var(--transition-fast), background-color var(--transition-fast);
+}
+
+.form-input:focus,
+.form-select:focus,
+.form-textarea:focus {
+  outline: none;
+  border-color: var(--color-accent);
+}
+
+.form-input.is-invalid,
+.form-select.is-invalid,
+.form-textarea.is-invalid {
+  border-color: #D32F2F !important;
+  background-color: rgba(211, 47, 47, 0.04);
+}
+
+.form-error-msg {
+  color: #D32F2F;
+  font-size: 0.8rem;
+  font-weight: 500;
+  display: none;
+  margin-top: 4px;
+}
+
+.form-input.is-invalid + .form-error-msg,
+.form-textarea.is-invalid + .form-error-msg {
+  display: block;
+}
+
+/* Auto-expanding inputs (Địa chỉ & Ghi chú tự nở 2-3 dòng) */
+.form-auto-expand {
+  resize: none;
+  min-height: 48px;
+  max-height: 105px;
+  line-height: 1.5;
+  overflow-y: hidden;
+  field-sizing: content;
+  transition: border-color var(--transition-fast), background-color var(--transition-fast), height 0.12s ease;
+}
+
+.form-auto-expand::-webkit-scrollbar {
+  width: 5px;
+}
+
+.form-auto-expand::-webkit-scrollbar-thumb {
+  background-color: var(--color-border);
+  border-radius: 4px;
+}
+
+/* Payment Method Selection */
+.payment-methods-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+.payment-method-label {
+  cursor: pointer;
+  position: relative;
+}
+
+.payment-method-input {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.payment-method-card {
+  padding: 12px 14px;
+  border-radius: var(--radius-sm);
+  border: 1.5px solid var(--color-border);
+  background-color: var(--color-input-bg);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--color-text);
+  transition: border-color var(--transition-fast), background-color var(--transition-fast);
+}
+
+.payment-method-card:hover {
+  border-color: var(--color-accent);
+}
+
+.payment-method-input:checked + .payment-method-card {
+  border-color: var(--color-accent);
+  background-color: var(--color-card-hover);
+  box-shadow: 0 0 0 1px var(--color-accent);
+}
+
+.payment-method-icon {
+  width: 20px;
+  height: 20px;
+  fill: currentColor;
+  flex-shrink: 0;
+}
+
+/* Product Model Selector (Visual Radio / Pill Buttons) */
+.product-selector-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+}
+
+.product-option-label {
+  position: relative;
+  cursor: pointer;
+}
+
+.product-option-input {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.product-option-card {
+  padding: 14px 12px;
+  border-radius: var(--radius-sm);
+  border: 1.5px solid var(--color-border);
+  background-color: var(--color-input-bg);
+  text-align: center;
+  transition: border-color var(--transition-fast), background-color var(--transition-fast);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.product-option-card:hover {
+  border-color: var(--color-accent);
+}
+
+.product-option-input:checked + .product-option-card {
+  border-color: var(--color-accent);
+  background-color: var(--color-card-hover);
+  box-shadow: 0 0 0 1px var(--color-accent);
+}
+
+.option-name {
+  font-weight: 600;
+  font-size: 0.88rem;
+  color: var(--color-text);
+  line-height: 1.3;
+  margin-bottom: 4px;
+}
+
+.option-price {
+  font-size: 0.8rem;
+  color: var(--color-accent);
+  font-weight: 600;
+}
+
+/* Quantity Stepper */
+.quantity-control {
+  display: inline-flex;
+  align-items: center;
+  border: 1.5px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  background-color: var(--color-input-bg);
+  width: fit-content;
+}
+
+.qty-btn {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--color-text);
+  transition: background-color var(--transition-fast);
+}
+
+.qty-btn:hover {
+  background-color: var(--color-card);
+}
+
+.qty-input {
+  width: 50px;
+  text-align: center;
+  font-size: 1rem;
+  font-weight: 600;
+  border: none;
+  background: transparent;
+  color: var(--color-text);
+  -moz-appearance: textfield;
+}
+
+.qty-input::-webkit-outer-spin-button,
+.qty-input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Order Summary Box (Sticky Side Card) */
+.order-summary-card {
+  background-color: var(--color-card);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: 32px;
+  position: sticky;
+  top: calc(var(--header-height) + 24px);
+}
+
+.summary-title {
+  font-family: var(--font-heading);
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: var(--color-text);
+  margin-bottom: 20px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.summary-rows {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  margin-bottom: 24px;
+}
+
+.summary-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.92rem;
+  color: var(--color-text-muted);
+}
+
+.summary-row.highlight {
+  color: var(--color-text);
+  font-weight: 600;
+}
+
+.summary-divider {
+  height: 1px;
+  background-color: var(--color-border);
+  margin: 8px 0;
+}
+
+.summary-total {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  padding-top: 12px;
+  border-top: 1px solid var(--color-border);
+  margin-bottom: 24px;
+}
+
+.summary-total-label {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--color-text);
+}
+
+.summary-total-amount {
+  font-family: var(--font-heading);
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: var(--color-accent);
+}
+
+.summary-guarantees {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 24px;
+  padding-top: 20px;
+  border-top: 1px dashed var(--color-border);
+  font-size: 0.84rem;
+  color: var(--color-text-muted);
+}
+
+.guarantee-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.guarantee-item svg {
+  width: 16px;
+  height: 16px;
+  fill: var(--color-accent);
+  flex-shrink: 0;
+}
+
+/* Confirmation Success Modal */
+.modal-backdrop {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.65);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  padding: 24px;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity var(--transition-normal);
+}
+
+.modal-backdrop.is-active {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.modal-card {
+  background-color: var(--color-card);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: 32px;
+  max-width: 520px;
+  width: 100%;
+  max-height: 90vh;
+  overflow-y: auto;
+  box-shadow: var(--shadow-modal);
+  transform: translateY(20px) scale(0.97);
+  transition: transform var(--transition-normal);
+  text-align: center;
+}
+
+.modal-backdrop.is-active .modal-card {
+  transform: translateY(0) scale(1);
+}
+
+.modal-icon-badge {
+  width: 64px;
+  height: 64px;
+  border-radius: var(--radius-full);
+  background-color: var(--color-success-bg);
+  color: var(--color-success);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.modal-icon-badge svg {
+  width: 32px;
+  height: 32px;
+  fill: currentColor;
+}
+
+.modal-title {
+  font-family: var(--font-heading);
+  font-size: 1.65rem;
+  font-weight: 700;
+  color: var(--color-text);
+  margin-bottom: 12px;
+}
+
+.modal-message {
+  font-size: 0.95rem;
+  color: var(--color-text-muted);
+  line-height: 1.6;
+  margin-bottom: 24px;
+}
+
+.modal-order-details {
+  background-color: var(--color-bg);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  padding: 16px;
+  text-align: left;
+  font-size: 0.88rem;
+  margin-bottom: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.modal-detail-row {
+  display: flex;
+  justify-content: space-between;
+}
+
+.modal-detail-row span:first-child {
+  color: var(--color-text-muted);
+}
+
+.modal-detail-row span:last-child {
+  font-weight: 600;
+  color: var(--color-text);
+}
+
+.modal-payment-section {
+  background-color: var(--color-bg);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  padding: 18px;
+  margin-bottom: 24px;
+  text-align: center;
+}
+
+.modal-payment-title {
+  font-family: var(--font-heading);
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--color-text);
+  margin-bottom: 12px;
+}
+
+.modal-qr-img {
+  width: 200px;
+  height: 200px;
+  margin: 0 auto 14px auto;
+  border-radius: var(--radius-sm);
+  background-color: #FFFFFF;
+  padding: 8px;
+  border: 1px solid var(--color-border);
+}
+
+.modal-bank-info {
+  font-size: 0.88rem;
+  color: var(--color-text-muted);
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  text-align: left;
+}
+
+.bank-info-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.bank-info-val {
+  font-weight: 600;
+  color: var(--color-text);
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.btn-copy {
+  padding: 3px 8px;
+  font-size: 0.75rem;
+  border-radius: 4px;
+  border: 1px solid var(--color-border);
+  background-color: var(--color-card);
+  color: var(--color-accent);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.btn-copy:hover {
+  border-color: var(--color-accent);
+}
+
+.modal-close-btn {
+  width: 100%;
+}
+
+@media (max-width: 900px) {
+  .order-wrapper {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
+  .product-selector-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .order-form-container {
+    padding: 24px;
+  }
+
+  .order-summary-card {
+    position: static;
+  }
+}

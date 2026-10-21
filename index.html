@@ -1,0 +1,548 @@
+<!DOCTYPE html>
+<html lang="vi" data-theme="light">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mộc Sắc - Khung Tranh Tiểu Cảnh Việt Nam</title>
+  <meta name="description"
+    content="Mộc Sắc - Khung tranh gỗ thủ công tích hợp đèn LED ấm áp, tái hiện sống động những góc phố, văn hóa và ẩm thực thân thuộc của Việt Nam trong không gian 3D thu nhỏ.">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="assets/logo-light.png">
+
+  <!-- Google Fonts: Playfair Display & Be Vietnam Pro -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,400&display=swap"
+    rel="stylesheet">
+
+  <!-- Modular Stylesheets -->
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/header.css">
+  <link rel="stylesheet" href="css/hero.css">
+  <link rel="stylesheet" href="css/products.css">
+  <link rel="stylesheet" href="css/order.css">
+  <link rel="stylesheet" href="css/faq.css">
+  <link rel="stylesheet" href="css/floating.css">
+  <link rel="stylesheet" href="css/footer.css">
+  <link rel="stylesheet" href="css/animations.css">
+</head>
+
+<body>
+
+  <!-- ==================== PHẦN 1: HEADER ==================== -->
+  <header class="site-header" id="site-header">
+    <div class="container header-container">
+      <a href="#gioi-thieu" class="brand-link" aria-label="Mộc Sắc - Trang chủ">
+        <div class="brand-logo-wrapper">
+          <img id="brand-logo" class="brand-logo" src="assets/logo-light.png" alt="Mộc Sắc Logo">
+        </div>
+        <div class="brand-text">
+          <span class="brand-name">Mộc Sắc</span>
+          <span class="brand-tagline">Khung tranh tiểu cảnh</span>
+        </div>
+      </a>
+
+      <!-- Navigation & Controls -->
+      <nav class="nav-group" id="nav-group" aria-label="Điều hướng chính">
+        <ul class="nav-links">
+          <li><a href="#gioi-thieu" class="nav-link active">Giới thiệu</a></li>
+          <li><a href="#san-pham" class="nav-link">Sản phẩm</a></li>
+          <li><a href="#dat-hang" class="nav-link">Đặt hàng</a></li>
+          <li><a href="#faq" class="nav-link">Hỏi đáp</a></li>
+        </ul>
+
+        <!-- Dark / Light Mode Switcher -->
+        <button id="theme-toggle" class="theme-toggle-btn" aria-label="Chuyển chế độ sáng/tối">
+          <svg id="theme-icon" class="theme-toggle-icon" viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" stroke="currentColor" stroke-width="2" fill="none"
+              stroke-linecap="round" stroke-linejoin="round" />
+          </svg>
+          <span id="theme-text">Bật chế độ tối</span>
+        </button>
+      </nav>
+
+      <!-- Mobile Hamburger Button -->
+      <button class="nav-mobile-toggle" id="mobile-menu-toggle" aria-label="Mở menu" aria-expanded="false">
+        <svg class="nav-mobile-icon" viewBox="0 0 24 24" fill="none">
+          <line x1="3" y1="6" x2="21" y2="6" />
+          <line x1="3" y1="12" x2="21" y2="12" />
+          <line x1="3" y1="18" x2="21" y2="18" />
+        </svg>
+      </button>
+    </div>
+  </header>
+
+  <!-- ==================== PHẦN 2: HERO SECTION ==================== -->
+  <main>
+    <section class="hero-section section" id="gioi-thieu">
+      <div class="container">
+        <div class="hero-content fade-in-up">
+          <span class="hero-tag">Thủ công mỹ nghệ truyền thống</span>
+          <h1 class="hero-title">Mộc Sắc – Khung Tranh Tiểu Cảnh Việt Nam</h1>
+          <p class="hero-description">
+            Khung tranh gỗ thủ công tích hợp đèn LED ấm áp, tái hiện sống động những góc phố, văn hóa và ẩm thực thân
+            thuộc của Việt Nam trong không gian 3D thu nhỏ.
+          </p>
+          <div class="hero-actions">
+            <a href="#san-pham" class="btn">Xem Sản Phẩm &amp; Đặt Hàng</a>
+            <a href="#dat-hang" class="btn btn-outline">Tùy Chọn Đặt Hàng</a>
+          </div>
+
+          <div class="hero-features fade-in-up delay-1">
+            <div class="hero-feature-item">
+              <span class="hero-feature-name">Gỗ Tự Nhiên Tuyển Chọn</span>
+              <span class="hero-feature-desc">Khung gỗ dày dặn, gia công tỉ mỉ chống mối mọt</span>
+            </div>
+            <div class="hero-feature-item">
+              <span class="hero-feature-name">Đèn LED Vàng Ấm Cúng</span>
+              <span class="hero-feature-desc">Hệ thống chiếu sáng lung linh, cổng nguồn USB tiện lợi</span>
+            </div>
+            <div class="hero-feature-item">
+              <span class="hero-feature-name">Tỉ Lệ Chi Tiết Sống Động</span>
+              <span class="hero-feature-desc">Tái hiện chiều sâu ký ức phố thị Việt Nam thu nhỏ</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== PHẦN 3: SẢN PHẨM CHỦ ĐẠO ==================== -->
+    <section class="section" id="san-pham">
+      <div class="container">
+        <div class="section-header fade-in-up">
+          <h2 class="section-title">Hai Tác Phẩm Chủ Đạo</h2>
+          <p class="section-subtitle">Mỗi khung tranh là một câu chuyện ký ức đậm chất văn hóa Việt Nam được chế tác
+            tinh xảo bằng tay.</p>
+        </div>
+
+        <div class="products-grid">
+          <!-- Sản phẩm 01 -->
+          <article class="product-card fade-in-up delay-1">
+            <div class="product-image-box">
+              <img class="product-image" src="assets/concept-1.png"
+                alt="Khung tranh tiểu cảnh Góc Phố Ẩm Thực & Trà Đá Hà Nội">
+              <span class="product-badge">Mẫu 01</span>
+            </div>
+            <div class="product-info">
+              <span class="product-meta">Khung Tranh Thủ Công</span>
+              <h3 class="product-title">Góc Phố Ẩm Thực &amp; Trà Đá Hà Nội</h3>
+              <p class="product-desc">
+                Tái hiện nét văn hóa vỉa hè đặc trưng với quán trà đá ghế nhựa, gánh hàng rong và tinh hoa ẩm thực Việt
+                (Phở Hà Nội, Bánh mì, Gỏi cuốn) dưới ánh đèn vàng ấm cúng.
+              </p>
+
+              <div class="product-specs">
+                <span class="spec-pill">Kích thước: 18 × 18 × 5 cm</span>
+                <span class="spec-pill">Chất liệu: Gỗ tự nhiên</span>
+                <span class="spec-pill">Đèn LED vàng ấm</span>
+              </div>
+
+              <div class="product-footer">
+                <div class="product-price-box">
+                  <span class="price-label">Giá niêm yết</span>
+                  <span class="product-price">150.000đ</span>
+                </div>
+                <button type="button" class="btn product-buy-btn" data-model="model-1">
+                  Chọn mua mẫu này
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Sản phẩm 02 -->
+          <article class="product-card fade-in-up delay-2">
+            <div class="product-image-box">
+              <img class="product-image" src="assets/concept-2.png" alt="Khung tranh tiểu cảnh Ký Ức Phố Hàng Đào">
+              <span class="product-badge">Mẫu 02</span>
+            </div>
+            <div class="product-info">
+              <span class="product-meta">Khung Tranh Thủ Công</span>
+              <h3 class="product-title">Ký Ức Phố Hàng Đào</h3>
+              <p class="product-desc">
+                Khung cảnh phố cổ Hà Nội bình yên với giàn hoa giấy, chiếc xích lô chầm chậm lăn bánh, gánh hàng hoa và
+                tiệm cà phê, bánh mì góc phố thân thương.
+              </p>
+
+              <div class="product-specs">
+                <span class="spec-pill">Kích thước: 18 × 18 × 5 cm</span>
+                <span class="spec-pill">Chất liệu: Gỗ tự nhiên</span>
+                <span class="spec-pill">Đèn LED vàng ấm</span>
+              </div>
+
+              <div class="product-footer">
+                <div class="product-price-box">
+                  <span class="price-label">Giá niêm yết</span>
+                  <span class="product-price">150.000đ</span>
+                </div>
+                <button type="button" class="btn product-buy-btn" data-model="model-2">
+                  Chọn mua mẫu này
+                </button>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== PHẦN 4: FORM ĐẶT HÀNG ==================== -->
+    <section class="section order-section" id="dat-hang">
+      <div class="container">
+        <div class="section-header fade-in-up">
+          <h2 class="section-title">Đặt Mua Khung Tranh Mộc Sắc</h2>
+          <p class="section-subtitle">Điền thông tin nhận hàng nhanh chóng. Chúng tôi sẽ liên hệ xác nhận và đóng gói
+            cẩn thận gửi tận tay bạn.</p>
+        </div>
+
+        <div class="order-wrapper">
+          <!-- Form nhập liệu -->
+          <div class="order-form-container fade-in-up">
+            <h3 class="order-form-title">Thông Tin Giao Hàng</h3>
+            <p class="order-form-desc">Vui lòng điền chính xác thông tin để Mộc Sắc hỗ trợ bạn chu đáo nhất.</p>
+
+            <form id="order-form" novalidate>
+              <div class="form-grid">
+                <!-- Chọn mẫu sản phẩm -->
+                <div class="form-group">
+                  <label class="form-label">Chọn Mẫu Sản Phẩm <span class="required">*</span></label>
+                  <div class="product-selector-grid">
+                    <label class="product-option-label">
+                      <input type="radio" name="product_model" value="model-1" class="product-option-input" checked>
+                      <div class="product-option-card">
+                        <span class="option-name">Mẫu 01: Ẩm Thực Vỉa Hè</span>
+                        <span class="option-price">150.000đ</span>
+                      </div>
+                    </label>
+
+                    <label class="product-option-label">
+                      <input type="radio" name="product_model" value="model-2" class="product-option-input">
+                      <div class="product-option-card">
+                        <span class="option-name">Mẫu 02: Phố Hàng Đào</span>
+                        <span class="option-price">150.000đ</span>
+                      </div>
+                    </label>
+
+                    <label class="product-option-label">
+                      <input type="radio" name="product_model" value="combo-both" class="product-option-input">
+                      <div class="product-option-card">
+                        <span class="option-name">Bộ Đôi Cả 2 Mẫu</span>
+                        <span class="option-price">250.000đ (Ưu đãi)</span>
+                      </div>
+                    </label>
+                  </div>
+                </div>
+
+                <!-- Số lượng -->
+                <div class="form-group">
+                  <label class="form-label" for="order-qty">Số Lượng</label>
+                  <div class="quantity-control">
+                    <button type="button" class="qty-btn" id="qty-minus" aria-label="Giảm số lượng">−</button>
+                    <input type="number" id="order-qty" class="qty-input" value="1" min="1" max="50">
+                    <button type="button" class="qty-btn" id="qty-plus" aria-label="Tăng số lượng">+</button>
+                  </div>
+                </div>
+
+                <!-- Họ và tên -->
+                <div class="form-group">
+                  <label class="form-label" for="customer-name">Họ và tên khách hàng <span
+                      class="required">*</span></label>
+                  <input type="text" id="customer-name" class="form-input" required autocomplete="name">
+                  <span class="form-error-msg" id="error-name"></span>
+                </div>
+
+                <!-- Số điện thoại -->
+                <div class="form-group">
+                  <label class="form-label" for="customer-phone">Số điện thoại liên hệ <span
+                      class="required">*</span></label>
+                  <input type="tel" id="customer-phone" class="form-input" required autocomplete="tel">
+                  <span class="form-error-msg" id="error-phone"></span>
+                </div>
+
+                <!-- Địa chỉ -->
+                <div class="form-group">
+                  <label class="form-label" for="customer-address">Địa chỉ nhận hàng <span
+                      class="required">*</span></label>
+                  <textarea id="customer-address" class="form-input form-auto-expand" rows="1" required
+                    autocomplete="street-address"></textarea>
+                  <span class="form-error-msg" id="error-address"></span>
+                </div>
+
+                <!-- Phương thức thanh toán -->
+                <div class="form-group">
+                  <label class="form-label">Phương Thức Thanh Toán <span class="required">*</span></label>
+                  <div class="payment-methods-grid">
+                    <label class="payment-method-label">
+                      <input type="radio" name="payment_method" value="cod" class="payment-method-input" checked>
+                      <div class="payment-method-card">
+                        <svg class="payment-method-icon" viewBox="0 0 24 24">
+                          <path
+                            d="M20 4H4c-1.11 0-1.99.89-1.99 2L2 18c0 1.11.89 2 2 2h16c1.11 0 2-.89 2-2V6c0-1.11-.89-2-2-2zm0 14H4v-6h16v6zm0-10H4V6h16v2z" />
+                        </svg>
+                        <span>Nhận hàng (COD)</span>
+                      </div>
+                    </label>
+
+                    <label class="payment-method-label">
+                      <input type="radio" name="payment_method" value="vietqr" class="payment-method-input">
+                      <div class="payment-method-card">
+                        <svg class="payment-method-icon" viewBox="0 0 24 24">
+                          <path
+                            d="M3 3h8v8H3zm2 2v4h4V5zm8-2h8v8h-8zm2 2v4h4V5zM3 13h8v8H3zm2 2v4h4v-4zm13-2h3v2h-3zm-3 2h2v3h-2zm3 3h3v3h-3zm-3 2h2v2h-2zm5-4h2v2h-2z" />
+                        </svg>
+                        <span>Chuyển khoản VietQR</span>
+                      </div>
+                    </label>
+                  </div>
+                </div>
+
+                <!-- Ghi chú thêm -->
+                <div class="form-group">
+                  <label class="form-label" for="customer-note">Ghi chú thêm (Lời nhắn ghi kèm vào tranh / đóng gói
+                    quà)</label>
+                  <textarea id="customer-note" class="form-input form-auto-expand" rows="1"></textarea>
+                </div>
+
+                <!-- Submit Button -->
+                <button type="submit" class="btn" style="width: 100%; padding: 16px; margin-top: 10px;">
+                  Xác Nhận Đặt Hàng
+                </button>
+              </div>
+            </form>
+          </div>
+
+          <!-- Tóm tắt đơn hàng trực quan (Side Summary) -->
+          <aside class="order-summary-card fade-in-up delay-1">
+            <h3 class="summary-title">Tóm Tắt Đơn Hàng</h3>
+            <div class="summary-rows">
+              <div class="summary-row">
+                <span id="summary-model-name">Mẫu 01: Góc Phố Ẩm Thực &amp; Trà Đá Hà Nội</span>
+                <span id="summary-qty">x 1</span>
+              </div>
+              <div class="summary-row">
+                <span>Đơn giá</span>
+                <span id="summary-unit-price" class="highlight">150.000đ</span>
+              </div>
+              <div class="summary-row">
+                <span>Phí vận chuyển</span>
+                <span style="color: var(--color-accent); font-weight: 600;">Miễn phí toàn quốc</span>
+              </div>
+            </div>
+
+            <div class="summary-total">
+              <span class="summary-total-label">Tổng thanh toán:</span>
+              <span class="summary-total-amount" id="summary-total">150.000đ</span>
+            </div>
+
+            <div class="summary-guarantees">
+              <div class="guarantee-item">
+                <svg viewBox="0 0 20 20">
+                  <path d="M10 2L3 5v6c0 5 7 9 7 9s7-4 7-9V5l-7-3zm-1 12l-3-3 1.4-1.4L9 11.2l4.6-4.6L15 8l-6 6z" />
+                </svg>
+                <span>Kiểm tra hàng trước khi thanh toán (COD)</span>
+              </div>
+              <div class="guarantee-item">
+                <svg viewBox="0 0 20 20">
+                  <path d="M10 2a8 8 0 100 16 8 8 0 000-16zm1 11H9v-2h2v2zm0-4H9V5h2v4z" />
+                </svg>
+                <span>Bảo hành đèn LED 12 tháng, 1 đổi 1 lỗi do nhà sản xuất</span>
+              </div>
+              <div class="guarantee-item">
+                <svg viewBox="0 0 20 20">
+                  <path d="M4 4h12v2H4V4zm0 4h12v2H4V8zm0 4h8v2H4v-2z" />
+                </svg>
+                <span>Đóng gói chống sốc đa lớp, an toàn tuyệt đối khi chuyển phát</span>
+              </div>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== PHẦN 5: CÂU HỎI THƯỜNG GẶP (FAQ) ==================== -->
+    <section class="section faq-section" id="faq">
+      <div class="container">
+        <div class="section-header fade-in-up">
+          <h2 class="section-title">Câu Hỏi Thường Gặp</h2>
+          <p class="section-subtitle">Những giải đáp chi tiết giúp bạn an tâm khi lựa chọn tác phẩm khung tranh Mộc Sắc.
+          </p>
+        </div>
+
+        <div class="faq-list fade-in-up delay-1">
+          <!-- Câu 1 -->
+          <div class="faq-item">
+            <button class="faq-question" type="button" aria-expanded="false">
+              <span>Đèn LED trong tranh sử dụng nguồn điện như thế nào?</span>
+              <svg class="faq-icon" viewBox="0 0 24 24">
+                <polyline points="6 9 12 15 18 9" />
+              </svg>
+            </button>
+            <div class="faq-answer">
+              <p>Khung tranh tích hợp dải đèn LED vàng ấm dùng đầu cáp nguồn chuẩn USB 5V an toàn tuyệt đối. Bạn có thể
+                cắm trực tiếp vào củ sạc điện thoại, cổng USB máy tính / laptop hoặc pin sạc dự phòng để đặt tranh ở bất
+                cứ đâu trên bàn làm việc hay kệ sách.</p>
+            </div>
+          </div>
+
+          <!-- Câu 2 -->
+          <div class="faq-item">
+            <button class="faq-question" type="button" aria-expanded="false">
+              <span>Khung tranh có mặt kính chắn bụi bảo vệ không?</span>
+              <svg class="faq-icon" viewBox="0 0 24 24">
+                <polyline points="6 9 12 15 18 9" />
+              </svg>
+            </button>
+            <div class="faq-answer">
+              <p>Có. Mặt trước khung tranh được trang bị tấm mica acrylic chuyên dụng có độ trong suốt quang học cao,
+                giúp chống bụi bẩn bám vào các chi tiết tiểu cảnh 3D bên trong, đồng thời chống nứt vỡ an toàn trong quá
+                trình vận chuyển.</p>
+            </div>
+          </div>
+
+          <!-- Câu 3 -->
+          <div class="faq-item">
+            <button class="faq-question" type="button" aria-expanded="false">
+              <span>Chính sách giao hàng và bảo hành ra sao?</span>
+              <svg class="faq-icon" viewBox="0 0 24 24">
+                <polyline points="6 9 12 15 18 9" />
+              </svg>
+            </button>
+            <div class="faq-answer">
+              <p>Mộc Sắc hỗ trợ miễn phí vận chuyển toàn quốc. Bạn được mở kiện hàng đồng kiểm tra trước khi thanh toán
+                tiền (COD). Mạch đèn LED và cấu trúc khung gỗ được bảo hành 12 tháng, hỗ trợ 1 đổi 1 ngay nếu phát sinh
+                lỗi kỹ thuật do nhà sản xuất.</p>
+            </div>
+          </div>
+
+          <!-- Câu 4 -->
+          <div class="faq-item">
+            <button class="faq-question" type="button" aria-expanded="false">
+              <span>Tôi có thể yêu cầu gói quà và đính kèm thiệp viết tay không?</span>
+              <svg class="faq-icon" viewBox="0 0 24 24">
+                <polyline points="6 9 12 15 18 9" />
+              </svg>
+            </button>
+            <div class="faq-answer">
+              <p>Hoàn toàn miễn phí! Nếu bạn mua làm quà tặng sinh nhật, tân gia hay kỷ niệm, hãy ghi lời chúc vào ô
+                "Ghi chú thêm" khi đặt hàng. Nghệ nhân Mộc Sắc sẽ viết nắn nót thiệp tay và đóng hộp quà thắt dây cói
+                mộc mạc gửi đến người nhận.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ==================== SUCCESS MODAL ==================== -->
+  <div class="modal-backdrop" id="order-success-modal" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+    <div class="modal-card">
+      <div class="modal-icon-badge">
+        <svg viewBox="0 0 24 24">
+          <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z" />
+        </svg>
+      </div>
+      <h3 class="modal-title" id="modal-title">Đặt Hàng Thành Công!</h3>
+      <p class="modal-message">
+        Cảm ơn bạn đã lựa chọn <strong>Mộc Sắc</strong>. Nghệ nhân của xưởng sẽ liên hệ lại với bạn trong vòng 24h để
+        xác nhận và tiến hành chuyển tranh đến bạn sớm nhất.
+      </p>
+
+      <div class="modal-order-details">
+        <div class="modal-detail-row">
+          <span>Người nhận:</span>
+          <span id="modal-detail-customer">-</span>
+        </div>
+        <div class="modal-detail-row">
+          <span>Số điện thoại:</span>
+          <span id="modal-detail-phone">-</span>
+        </div>
+        <div class="modal-detail-row">
+          <span>Sản phẩm:</span>
+          <span id="modal-detail-product">-</span>
+        </div>
+        <div class="modal-detail-row">
+          <span>Tổng tiền:</span>
+          <span id="modal-detail-total">-</span>
+        </div>
+        <div class="modal-detail-row">
+          <span>Hình thức:</span>
+          <span id="modal-detail-payment">-</span>
+        </div>
+      </div>
+
+      <!-- Container hiển thị mã VietQR nếu chọn chuyển khoản -->
+      <div class="modal-payment-section" id="modal-payment-section" style="display: none;"></div>
+
+      <button type="button" class="btn modal-close-btn" id="modal-close-btn">
+        Đóng Thông Báo
+      </button>
+    </div>
+  </div>
+
+  <!-- ==================== BONG BÓNG LIÊN HỆ NỔI (ZALO & HOTLINE) ==================== -->
+  <aside class="floating-contact-group" aria-label="Liên hệ nhanh">
+    <!-- Nút Zalo -->
+    <a href="https://zalo.me/0988123456" target="_blank" rel="noopener noreferrer"
+      class="floating-btn floating-btn-zalo" aria-label="Chat Zalo với Mộc Sắc">
+      <svg viewBox="0 0 24 24">
+        <path
+          d="M12 2C6.48 2 2 5.92 2 10.75c0 2.8 1.5 5.28 3.84 6.84l-.84 3.08c-.1.38.27.71.63.56l3.52-1.46c.92.27 1.88.42 2.85.42 5.52 0 10-3.92 10-8.75S17.52 2 12 2z" />
+      </svg>
+      <span class="floating-tooltip">Chat Zalo</span>
+    </a>
+
+    <!-- Nút Hotline -->
+    <a href="tel:0988123456" class="floating-btn floating-btn-phone" aria-label="Gọi điện hotline xưởng Mộc Sắc">
+      <svg viewBox="0 0 24 24">
+        <path
+          d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z" />
+      </svg>
+      <span class="floating-tooltip">Hotline: 0988 123 456</span>
+    </a>
+  </aside>
+
+  <!-- ==================== FOOTER ==================== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <span class="footer-brand-title">Mộc Sắc - Khung tranh tiểu cảnh</span>
+          <p class="footer-brand-desc">
+            Không gian nghệ thuật thu nhỏ lưu giữ hồn phố và phong vị Việt Nam qua từng đường nét mộc mạc và ánh sáng
+            đèn LED ấm áp.
+          </p>
+        </div>
+
+        <div>
+          <h4 class="footer-col-title">Liên Hệ Xưởng</h4>
+          <ul class="footer-list">
+            <li class="footer-item">Hotline: 0988 123 456</li>
+            <li class="footer-item">Email: lienhe@mocsac.vn</li>
+            <li class="footer-item">Địa chỉ: Phố Cổ, Hoàn Kiếm, Hà Nội</li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-col-title">Chính Sách Khách Hàng</h4>
+          <ul class="footer-list">
+            <li class="footer-item">Giao hàng miễn phí toàn quốc</li>
+            <li class="footer-item">Đồng kiểm trước khi thanh toán</li>
+            <li class="footer-item">Bảo hành mạch đèn LED 12 tháng</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <span class="footer-copyright">© 2026 Mộc Sắc - Khung tranh tiểu cảnh. Bản quyền được bảo lưu.</span>
+        <span class="footer-note">Tinh hoa mộc họa – Gìn giữ ký ức Việt</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Modular Scripts -->
+  <script type="module" src="js/main.js"></script>
+</body>
+
+</html>
