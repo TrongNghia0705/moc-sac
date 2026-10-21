@@ -25,7 +25,16 @@
   border-color: var(--color-accent);
 }
 
-/* Image Container */
+/* Image Container & Multi-angle Gallery */
+.product-gallery {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  background-color: rgba(0, 0, 0, 0.03);
+  padding-bottom: 14px;
+  border-bottom: 1px solid var(--color-border);
+}
+
 .product-image-box {
   position: relative;
   width: 100%;
@@ -38,11 +47,84 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
-  transition: transform var(--transition-slow);
+  transition: opacity 0.16s ease, transform var(--transition-normal), filter var(--transition-normal);
 }
 
 .product-card:hover .product-image {
-  transform: scale(1.03);
+  transform: scale(1.02);
+}
+
+.product-view-tag {
+  position: absolute;
+  bottom: 12px;
+  right: 12px;
+  background: rgba(30, 24, 18, 0.72);
+  color: #FFFFFF;
+  backdrop-filter: blur(4px);
+  font-size: 0.75rem;
+  font-weight: 500;
+  padding: 4px 10px;
+  border-radius: var(--radius-full);
+  pointer-events: none;
+  transition: all var(--transition-fast);
+}
+
+/* Thumbnails Strip */
+.product-thumbs-strip {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  padding: 0 16px;
+}
+
+.product-thumb-btn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+  background: var(--color-bg);
+  border: 1.5px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  padding: 6px 4px;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  outline: none;
+}
+
+.product-thumb-btn:hover {
+  border-color: var(--color-accent);
+  transform: translateY(-2px);
+}
+
+.product-thumb-btn.active {
+  border-color: var(--color-accent);
+  background: rgba(139, 90, 43, 0.08);
+  box-shadow: 0 0 0 2px rgba(139, 90, 43, 0.25);
+}
+
+[data-theme="dark"] .product-thumb-btn.active {
+  background: rgba(230, 161, 92, 0.15);
+  box-shadow: 0 0 0 2px rgba(230, 161, 92, 0.3);
+}
+
+.thumb-img {
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  object-fit: cover;
+  border-radius: 3px;
+  display: block;
+}
+
+.thumb-title {
+  font-size: 0.72rem;
+  font-weight: 600;
+  color: var(--color-text-muted);
+  white-space: nowrap;
+}
+
+.product-thumb-btn.active .thumb-title {
+  color: var(--color-text);
+  font-weight: 700;
 }
 
 .product-badge {

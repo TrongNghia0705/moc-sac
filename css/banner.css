@@ -1,0 +1,133 @@
+/* ==========================================================================
+   MỘC SẮC - KHUNG TRANH TIỂU CẢNH
+   Atmospheric Break Banner (Dải chuyển tiếp nghệ thuật)
+   ========================================================================== */
+
+.break-banner-section {
+  position: relative;
+  width: 100%;
+  min-height: 380px;
+  display: flex;
+  align-items: center;
+  background-color: #1A1612;
+  background-image: 
+    linear-gradient(to bottom, var(--color-bg) 0%, rgba(20, 16, 12, 0.6) 18%, rgba(20, 16, 12, 0.6) 82%, var(--color-bg) 100%),
+    linear-gradient(to right, rgba(16, 12, 8, 0.92) 0%, rgba(16, 12, 8, 0.78) 42%, rgba(16, 12, 8, 0.35) 75%, rgba(16, 12, 8, 0.65) 100%),
+    url('../assets/break-banner.jpg');
+  background-size: cover;
+  background-position: center right;
+  background-repeat: no-repeat;
+  padding: clamp(65px, 8vw, 95px) 0;
+  overflow: hidden;
+  transition: background-image var(--transition-normal);
+}
+
+[data-theme="dark"] .break-banner-section {
+  background-image: 
+    linear-gradient(to bottom, var(--color-bg) 0%, rgba(30, 34, 20, 0.75) 18%, rgba(30, 34, 20, 0.75) 82%, var(--color-bg) 100%),
+    linear-gradient(to right, rgba(20, 24, 14, 0.94) 0%, rgba(20, 24, 14, 0.82) 42%, rgba(20, 24, 14, 0.38) 75%, rgba(20, 24, 14, 0.7) 100%),
+    url('../assets/break-banner.jpg');
+}
+
+.break-banner-content {
+  max-width: 620px;
+  position: relative;
+  z-index: 2;
+  color: #FAF7F0;
+}
+
+.break-banner-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 0.82rem;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: #E6A15C;
+  margin-bottom: 16px;
+}
+
+.break-banner-tag::before {
+  content: '';
+  display: inline-block;
+  width: 24px;
+  height: 2px;
+  background-color: #E6A15C;
+  border-radius: 2px;
+}
+
+.break-banner-quote {
+  font-family: var(--font-heading);
+  font-size: clamp(1.65rem, 3.2vw, 2.4rem);
+  font-weight: 600;
+  font-style: italic;
+  line-height: 1.32;
+  letter-spacing: -0.015em;
+  color: #FFFFFF;
+  margin-bottom: 16px;
+  text-shadow: 0 2px 14px rgba(0, 0, 0, 0.5);
+}
+
+.break-banner-subtext {
+  font-size: clamp(0.95rem, 1.4vw, 1.05rem);
+  line-height: 1.65;
+  color: rgba(250, 247, 240, 0.88);
+  margin-bottom: 22px;
+  max-width: 530px;
+  text-shadow: 0 1px 8px rgba(0, 0, 0, 0.4);
+}
+
+.break-banner-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 16px;
+  border-radius: var(--radius-full);
+  background: rgba(230, 161, 92, 0.15);
+  border: 1px solid rgba(230, 161, 92, 0.35);
+  color: #F8DFBE;
+  font-size: 0.82rem;
+  font-weight: 500;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+
+.break-banner-badge svg {
+  width: 14px;
+  height: 14px;
+  color: #E6A15C;
+  flex-shrink: 0;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .break-banner-section {
+    min-height: 320px;
+    background-position: 72% center;
+    padding: 50px 0;
+    text-align: left;
+    background-image: 
+      linear-gradient(to bottom, var(--color-bg) 0%, rgba(16, 12, 8, 0.86) 15%, rgba(16, 12, 8, 0.9) 85%, var(--color-bg) 100%),
+      url('../assets/break-banner.jpg');
+  }
+
+  [data-theme="dark"] .break-banner-section {
+    background-image: 
+      linear-gradient(to bottom, var(--color-bg) 0%, rgba(20, 24, 14, 0.88) 15%, rgba(20, 24, 14, 0.92) 85%, var(--color-bg) 100%),
+      url('../assets/break-banner.jpg');
+  }
+
+  .break-banner-content {
+    max-width: 100%;
+  }
+
+  .break-banner-quote {
+    font-size: 1.45rem;
+    line-height: 1.35;
+  }
+
+  .break-banner-subtext {
+    font-size: 0.92rem;
+  }
+}

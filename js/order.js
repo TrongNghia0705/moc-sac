@@ -333,6 +333,12 @@ export function initOrder() {
         modalDetailPayment.textContent = paymentMethod === 'vietqr' ? 'Chuyển khoản VietQR' : 'Thanh toán COD khi nhận';
       }
 
+      // Điền sẵn số điện thoại vào ô tra cứu đơn hàng
+      const trackingInput = document.getElementById('tracking-phone-input');
+      if (trackingInput) {
+        trackingInput.value = customerPhone;
+      }
+
       // Hiển thị phần VietQR nếu khách chọn chuyển khoản
       if (modalPaymentSection) {
         if (paymentMethod === 'vietqr') {
@@ -417,6 +423,22 @@ export function initOrder() {
     modalCloseBtn.addEventListener('click', () => {
       modal.classList.remove('is-active');
       document.body.style.overflow = '';
+    });
+  }
+
+  // Nút theo dõi đơn hàng trong modal
+  const modalTrackBtn = document.getElementById('modal-track-btn');
+  if (modalTrackBtn && modal) {
+    modalTrackBtn.addEventListener('click', () => {
+      modal.classList.remove('is-active');
+      document.body.style.overflow = '';
+      const trackingInput = document.getElementById('tracking-phone-input');
+      const trackingForm = document.getElementById('tracking-form');
+      if (trackingForm && trackingInput && trackingInput.value) {
+        setTimeout(() => {
+          trackingForm.dispatchEvent(new Event('submit'));
+        }, 300);
+      }
     });
   }
 

@@ -7,6 +7,8 @@ import { initTheme } from './theme.js';
 import { initNavigation } from './navigation.js';
 import { initOrder } from './order.js';
 import { initFAQ } from './faq.js';
+import { initTracking } from './tracking.js';
+import { initProductGallery } from './gallery.js';
 
 document.addEventListener('DOMContentLoaded', () => {
   document.documentElement.classList.add('has-js');
@@ -14,7 +16,9 @@ document.addEventListener('DOMContentLoaded', () => {
   // Initialize Core Modules
   initTheme();
   initNavigation();
+  initProductGallery();
   initOrder();
+  initTracking();
   initFAQ();
 
   // Scroll Reveal Animations
