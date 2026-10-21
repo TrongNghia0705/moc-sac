@@ -12,12 +12,12 @@ const PRICES = {
 // Cấu hình tài khoản ngân hàng nhận thanh toán VietQR
 const BANK_CONFIG = {
   bankId: 'MB', // MBBank (hoặc VCB, TCB, ACB, VPB, TPB,...)
-  accountNo: '0988123456', // Số tài khoản ngân hàng của xưởng
+  accountNo: '0988123456', // Số tài khoản ngân hàng Mộc Sắc
   accountName: 'MOC SAC KHUNG TRANH' // Tên chủ tài khoản
 };
 
 // Cấu hình Google Sheet Webhook (Dán link Webhook Google Apps Script của bạn vào đây)
-const GOOGLE_SHEET_WEBHOOK_URL = '';
+const GOOGLE_SHEET_WEBHOOK_URL = 'https://script.google.com/macros/s/AKfycbyd4hlyGx6K_QZ6QALSEdbillWNr8v1qfVgTjN8_hUnRkH4vIEc6erEW21DO0_swWW2/exec';
 
 export function initOrder() {
   const form = document.getElementById('order-form');
@@ -368,7 +368,7 @@ export function initOrder() {
               </div>
             </div>
             <p style="font-size: 0.8rem; color: var(--color-text-muted); margin-top: 10px; font-style: italic;">
-              Xưởng sẽ kiểm tra giao dịch và gọi điện thông báo cho bạn ngay khi nhận được thanh toán.
+              Team Mộc Sắc sẽ kiểm tra giao dịch và gọi điện thông báo cho bạn ngay khi nhận được thanh toán.
             </p>
           `;
 
