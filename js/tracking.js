@@ -170,7 +170,7 @@ export function initTracking() {
       const customerAddress = order.customerAddress || 'Đang cập nhật';
       const productModel = order.productModel || 'Khung tranh Mộc Sắc';
       const quantity = order.quantity || 1;
-      const totalAmount = typeof order.totalAmount === 'number' ? formatCurrency(order.totalAmount) : (order.totalAmount || '150.000đ');
+      const totalAmount = typeof order.totalAmount === 'number' ? formatCurrency(order.totalAmount) : (order.totalAmount || '219.000đ');
       const paymentMethod = order.paymentMethod || 'Thanh toán COD khi nhận';
       const note = order.customerNote || order.note || 'Không có';
 

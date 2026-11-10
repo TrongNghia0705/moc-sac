@@ -1,0 +1,11 @@
+{
+  "version": 1,
+  "skills": {
+    "vibe-coding-spec": {
+      "source": "tarunccet/pm-skills",
+      "sourceType": "github",
+      "skillPath": "pm-vibe-coding/skills/vibe-coding-spec/SKILL.md",
+      "computedHash": "21e3cc3f4e9d73b63b304bf9ef94aa30190202c3fc8300ead95fcfd71d78c9b6"
+    }
+  }
+}

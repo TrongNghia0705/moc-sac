@@ -114,133 +114,140 @@
     </section>
 
     <!-- ==================== PHẦN 3: SẢN PHẨM CHỦ ĐẠO ==================== -->
-    <section class="section" id="san-pham">
+    <section class="section product-showcase-section" id="san-pham">
       <div class="container">
         <div class="section-header fade-in-up">
-          <h2 class="section-title">Hai Tác Phẩm Chủ Đạo</h2>
-          <p class="section-subtitle">Mỗi khung tranh là sự kết hợp giữa thiết kế đồ họa layer đa tầng, mô hình tiểu
-            cảnh
-            mini và ánh đèn đêm hoài niệm.</p>
+          <span class="section-badge">Tác Phẩm Độc Bản</span>
+          <h2 class="section-title">Tiệm Cà Phê Thanh Xuân</h2>
+          <p class="section-subtitle">
+            Khung tranh tiểu cảnh 3D đa tầng tái hiện góc quán cà phê xưa rực rỡ giàn hoa giấy, ánh đèn LED vàng ấm cúng và những mảng ký ức thanh xuân thân thương.
+          </p>
         </div>
 
-        <div class="products-grid">
-          <!-- Sản phẩm 01 -->
-          <article class="product-card fade-in-up delay-1">
-            <div class="product-gallery">
-              <div class="product-image-box">
-                <img class="product-image" id="product-main-img-1" src="assets/concept-1.png"
-                  alt="Khung tranh tiểu cảnh Góc Phố Ẩm Thực & Trà Đá Hà Nội">
-                <span class="product-badge">Mẫu 01</span>
-                <span class="product-view-tag">Góc chính diện</span>
-              </div>
-
-              <!-- Thư viện xem 3 góc độ -->
-              <div class="product-thumbs-strip" role="tablist" aria-label="Chọn góc xem Mẫu 01">
-                <button type="button" class="product-thumb-btn active" data-target-img="product-main-img-1"
-                  data-src="assets/concept-1.png" data-label="Góc chính diện" data-view-mode="front" role="tab"
-                  aria-selected="true" title="Xem góc chính diện">
-                  <img src="assets/concept-1.png" alt="Mẫu 01 - Chính diện" class="thumb-img">
-                  <span class="thumb-title">Chính diện</span>
-                </button>
-                <button type="button" class="product-thumb-btn" data-target-img="product-main-img-1"
-                  data-src="assets/concept-1-angle.png" data-label="Góc nghiêng" data-view-mode="angle" role="tab"
-                  aria-selected="false" title="Xem góc nghiêng 3D">
-                  <img src="assets/concept-1-angle.png" alt="Mẫu 01 - Góc nghiêng 3D" class="thumb-img">
-                  <span class="thumb-title">Góc nghiêng</span>
-                </button>
-                <button type="button" class="product-thumb-btn" data-target-img="product-main-img-1"
-                  data-src="assets/concept-1-desk.png" data-label="Trưng bày góc bàn" data-view-mode="desk" role="tab"
-                  aria-selected="false" title="Xem trưng bày bàn làm việc">
-                  <img src="assets/concept-1-desk.png" alt="Mẫu 01 - Trưng bày bàn" class="thumb-img">
-                  <span class="thumb-title">Góc bàn làm việc</span>
-                </button>
-              </div>
+        <div class="showcase-card fade-in-up">
+          <!-- Cột Trái: Thư Viện Ảnh Đa Góc Nhìn Tương Tác -->
+          <div class="showcase-gallery">
+            <div class="showcase-main-box" id="showcase-main-box" title="Bấm vào ảnh để phóng to xem chi tiết">
+              <img class="showcase-main-img" id="product-main-img" src="assets/thanhxuan-front.jpg"
+                alt="Khung tranh tiểu cảnh 3D Tiệm Cà Phê Thanh Xuân">
+              <span class="product-badge">Concept Độc Bản</span>
+              <button type="button" class="showcase-zoom-btn" id="showcase-zoom-btn" title="Phóng to ảnh xem chi tiết" aria-label="Phóng to ảnh">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <circle cx="11" cy="11" r="8"></circle>
+                  <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                  <line x1="11" y1="8" x2="11" y2="14"></line>
+                  <line x1="8" y1="11" x2="14" y2="11"></line>
+                </svg>
+              </button>
+              <span class="product-view-tag" id="current-view-tag">Chính diện lên đèn</span>
             </div>
-            <div class="product-info">
-              <span class="product-meta">Khung Tranh Layer 3D</span>
-              <h3 class="product-title">Góc Phố Ẩm Thực &amp; Trà Đá Hà Nội</h3>
-              <p class="product-desc">
-                Tái hiện nét văn hóa vỉa hè qua các lớp background layer chiều sâu, quán trà đá ghế nhựa mini, gánh hàng
-                rong và ẩm thực Việt (Phở, Bánh mì) lung linh dưới ánh đèn LED.
+
+            <!-- Dải 5 góc xem tương tác -->
+            <div class="showcase-thumbs-strip" role="tablist" aria-label="Chọn góc xem tác phẩm">
+              <button type="button" class="product-thumb-btn active" data-target-img="product-main-img"
+                data-src="assets/thanhxuan-front.jpg" data-label="Chính diện lên đèn" data-view-mode="front" role="tab"
+                aria-selected="true" title="Xem góc chính diện lên đèn">
+                <img src="assets/thanhxuan-front.jpg" alt="Chính diện" class="thumb-img">
+                <span class="thumb-title">Chính diện</span>
+              </button>
+
+              <button type="button" class="product-thumb-btn" data-target-img="product-main-img"
+                data-src="assets/thanhxuan-desk.jpg" data-label="Góc bàn làm việc" data-view-mode="desk" role="tab"
+                aria-selected="false" title="Xem trưng bày bàn làm việc buổi tối">
+                <img src="assets/thanhxuan-desk.jpg" alt="Bàn làm việc" class="thumb-img">
+                <span class="thumb-title">Góc bàn</span>
+              </button>
+
+              <button type="button" class="product-thumb-btn" data-target-img="product-main-img"
+                data-src="assets/thanhxuan-unboxing.jpg" data-label="Trọn bộ mở hộp quà" data-view-mode="unboxing" role="tab"
+                aria-selected="false" title="Xem mở hộp quà lót rơm thủ công">
+                <img src="assets/thanhxuan-unboxing.jpg" alt="Mở hộp quà" class="thumb-img">
+                <span class="thumb-title">Mở hộp quà</span>
+              </button>
+
+              <button type="button" class="product-thumb-btn" data-target-img="product-main-img"
+                data-src="assets/thanhxuan-anatomy.jpg" data-label="Sơ đồ cấu tạo 8 lớp" data-view-mode="anatomy" role="tab"
+                aria-selected="false" title="Xem sơ đồ cấu tạo Exploded View 8 lớp">
+                <img src="assets/thanhxuan-anatomy.jpg" alt="Cấu tạo 8 lớp" class="thumb-img">
+                <span class="thumb-title">Cấu tạo 8 lớp</span>
+              </button>
+
+              <button type="button" class="product-thumb-btn" data-target-img="product-main-img"
+                data-src="assets/thanhxuan-packaging.jpg" data-label="Hộp quà vintage" data-view-mode="box" role="tab"
+                aria-selected="false" title="Xem bao bì đóng gói The Heartbeat Moment">
+                <img src="assets/thanhxuan-packaging.jpg" alt="Hộp quà vintage" class="thumb-img">
+                <span class="thumb-title">Hộp vintage</span>
+              </button>
+            </div>
+          </div>
+
+          <!-- Cột Phải: Thông tin chi tiết, Cấu tạo & Giá -->
+          <div class="showcase-info">
+            <div class="showcase-header">
+              <span class="product-meta">Khung Tranh Tiểu Cảnh 3D Đa Tầng</span>
+              <h3 class="showcase-title">Tiệm Cà Phê Thanh Xuân</h3>
+              <p class="showcase-desc">
+                Lấy cảm hứng từ những quán cóc cà phê phin mộc mạc của thập niên trước, <strong>Tiệm Cà Phê Thanh Xuân</strong> tái hiện trọn vẹn từng chi tiết thân thương: giàn hoa giấy rực rỡ trước hiên, chú chó vàng trung thành ngồi sưởi nắng, dây cờ đỏ sao vàng, bộ bàn ghế gỗ tí hon và ánh đèn spotlight mini rọi ấm áp khi màn đêm buông xuống.
               </p>
+            </div>
 
-              <div class="product-specs">
-                <span class="spec-pill">Kích thước: 18 × 18 × 5 cm</span>
-                <span class="spec-pill">Khung hộp 3D cao cấp</span>
-                <span class="spec-pill">Layer đa tầng &amp; Mô hình mini</span>
-                <span class="spec-pill">Đèn LED dùng pin tiện lợi</span>
+            <!-- Cấu tạo 8 lớp nổi bật từ poster anatomy -->
+            <div class="anatomy-highlights">
+              <div class="anatomy-header">
+                <span class="anatomy-title">
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+                  Cấu Tạo Chiều Sâu 8 Lớp (Exploded View)
+                </span>
               </div>
-
-              <div class="product-footer">
-                <div class="product-price-box">
-                  <span class="price-label">Giá niêm yết</span>
-                  <span class="product-price">150.000đ</span>
+              <div class="anatomy-grid">
+                <div class="anatomy-step">
+                  <span class="step-num">Lớp 1-2</span>
+                  <span class="step-text">Khung gỗ vân tự nhiên &amp; Mica trong bảo vệ chống bụi</span>
                 </div>
-                <button type="button" class="btn product-buy-btn" data-model="model-1">
-                  Chọn mua mẫu này
-                </button>
-              </div>
-            </div>
-          </article>
-
-          <!-- Sản phẩm 02 -->
-          <article class="product-card fade-in-up delay-2">
-            <div class="product-gallery">
-              <div class="product-image-box">
-                <img class="product-image" id="product-main-img-2" src="assets/concept-2.png"
-                  alt="Khung tranh tiểu cảnh Ký Ức Phố Hàng Đào">
-                <span class="product-badge">Mẫu 02</span>
-                <span class="product-view-tag">Góc chính diện</span>
-              </div>
-
-              <!-- Thư viện xem 3 góc độ -->
-              <div class="product-thumbs-strip" role="tablist" aria-label="Chọn góc xem Mẫu 02">
-                <button type="button" class="product-thumb-btn active" data-target-img="product-main-img-2"
-                  data-src="assets/concept-2.png" data-label="Góc chính diện" data-view-mode="front" role="tab"
-                  aria-selected="true" title="Xem góc chính diện">
-                  <img src="assets/concept-2.png" alt="Mẫu 02 - Chính diện" class="thumb-img">
-                  <span class="thumb-title">Chính diện</span>
-                </button>
-                <button type="button" class="product-thumb-btn" data-target-img="product-main-img-2"
-                  data-src="assets/concept-2-angle.png" data-label="Góc nghiêng" data-view-mode="angle" role="tab"
-                  aria-selected="false" title="Xem góc nghiêng 3D">
-                  <img src="assets/concept-2-angle.png" alt="Mẫu 02 - Góc nghiêng 3D" class="thumb-img">
-                  <span class="thumb-title">Góc nghiêng</span>
-                </button>
-                <button type="button" class="product-thumb-btn" data-target-img="product-main-img-2"
-                  data-src="assets/concept-2-desk.png" data-label="Trưng bày góc bàn" data-view-mode="desk" role="tab"
-                  aria-selected="false" title="Xem trưng bày bàn làm việc">
-                  <img src="assets/concept-2-desk.png" alt="Mẫu 02 - Trưng bày bàn" class="thumb-img">
-                  <span class="thumb-title">Góc bàn làm việc</span>
-                </button>
-              </div>
-            </div>
-            <div class="product-info">
-              <span class="product-meta">Khung Tranh Layer 3D</span>
-              <h3 class="product-title">Ký Ức Phố Hàng Đào</h3>
-              <p class="product-desc">
-                Khung cảnh phố cổ Hà Nội bình yên với các lớp layer hoa giấy, chiếc xích lô thu nhỏ, gánh hoa và góc
-                tiệm cà phê, bánh mì thân thương rực rỡ khi lên đèn.
-              </p>
-
-              <div class="product-specs">
-                <span class="spec-pill">Kích thước: 18 × 18 × 5 cm</span>
-                <span class="spec-pill">Khung hộp 3D cao cấp</span>
-                <span class="spec-pill">Layer đa tầng &amp; Mô hình mini</span>
-                <span class="spec-pill">Đèn LED dùng pin tiện lợi</span>
-              </div>
-
-              <div class="product-footer">
-                <div class="product-price-box">
-                  <span class="price-label">Giá niêm yết</span>
-                  <span class="product-price">150.000đ</span>
+                <div class="anatomy-step">
+                  <span class="step-num">Lớp 3-4</span>
+                  <span class="step-text">2 Đèn LED mini rọi vàng &amp; Ảnh kỷ niệm, cờ đỏ sao vàng</span>
                 </div>
-                <button type="button" class="btn product-buy-btn" data-model="model-2">
-                  Chọn mua mẫu này
-                </button>
+                <div class="anatomy-step">
+                  <span class="step-num">Lớp 5-6</span>
+                  <span class="step-text">Kiến trúc tiệm cà phê, bàn ghế mộc &amp; Chú chó vàng</span>
+                </div>
+                <div class="anatomy-step">
+                  <span class="step-num">Lớp 7-8</span>
+                  <span class="step-text">Giàn hoa giấy rực rỡ, bối cảnh cây xanh &amp; Lưng cố định</span>
+                </div>
               </div>
             </div>
-          </article>
+
+            <div class="product-specs">
+              <span class="spec-pill">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18"/><path d="M9 21V9"/></svg>
+                Kích thước: ≈ 25 × 20 cm
+              </span>
+              <span class="spec-pill">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v20M2 12h20"/></svg>
+                8 lớp layer định hình chiều sâu
+              </span>
+              <span class="spec-pill">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2"/></svg>
+                2 Đèn LED rọi spotlight vàng ấm
+              </span>
+              <span class="spec-pill">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/></svg>
+                Hộp quà vintage lót rơm chống sốc
+              </span>
+            </div>
+
+            <div class="showcase-footer">
+              <div class="product-price-box">
+                <span class="price-label">Giá niêm yết (Đã gồm hộp quà &amp; đèn)</span>
+                <span class="product-price">219.000đ</span>
+              </div>
+              <button type="button" class="btn product-buy-btn" data-model="model-thanhxuan">
+                Đặt Mua Tác Phẩm Này
+              </button>
+            </div>
+          </div>
         </div>
       </div>
     </section>
@@ -251,11 +258,11 @@
         <div class="break-banner-content fade-in-up">
           <span class="break-banner-tag">Mộc Sắc • Thắp Sáng Ký Ức</span>
           <h2 class="break-banner-quote">
-            "Gói trọn một góc phố bình yên,<br>
+            "Gói trọn một góc quán bình yên,<br>
             gửi chút ấm áp vào góc bàn của bạn."
           </h2>
           <p class="break-banner-subtext">
-            Mỗi tác phẩm là sự kết hợp tỉ mỉ giữa layer đồ họa 3D đa tầng và mô hình tiểu cảnh thủ công từ Team Mộc Sắc.
+            Mỗi tác phẩm là sự kết hợp tỉ mỉ giữa 8 lớp đồ họa 3D đa tầng và mô hình tiểu cảnh thủ công từ Team Mộc Sắc.
           </p>
         </div>
       </div>
@@ -280,29 +287,20 @@
               <div class="form-grid">
                 <!-- Chọn mẫu sản phẩm -->
                 <div class="form-group">
-                  <label class="form-label">Chọn Mẫu Sản Phẩm <span class="required">*</span></label>
-                  <div class="product-selector-grid">
-                    <label class="product-option-label">
-                      <input type="radio" name="product_model" value="model-1" class="product-option-input" checked>
-                      <div class="product-option-card">
-                        <span class="option-name">Mẫu 01: Ẩm Thực Vỉa Hè</span>
-                        <span class="option-price">150.000đ</span>
-                      </div>
-                    </label>
-
-                    <label class="product-option-label">
-                      <input type="radio" name="product_model" value="model-2" class="product-option-input">
-                      <div class="product-option-card">
-                        <span class="option-name">Mẫu 02: Phố Hàng Đào</span>
-                        <span class="option-price">150.000đ</span>
-                      </div>
-                    </label>
-
-                    <label class="product-option-label">
-                      <input type="radio" name="product_model" value="combo-both" class="product-option-input">
-                      <div class="product-option-card">
-                        <span class="option-name">Bộ Đôi Cả 2 Mẫu</span>
-                        <span class="option-price">250.000đ (Ưu đãi)</span>
+                  <label class="form-label">Sản Phẩm Đặt Mua <span class="required">*</span></label>
+                  <div class="product-selector-grid single-product">
+                    <label class="product-option-label selected">
+                      <input type="radio" name="product_model" value="model-thanhxuan" class="product-option-input" checked>
+                      <div class="product-option-card single-option-card">
+                        <div class="option-preview">
+                          <img src="assets/thanhxuan-front.jpg" alt="Tiệm Cà Phê Thanh Xuân" class="option-thumb">
+                          <div class="option-meta">
+                            <span class="option-badge">Tác Phẩm Độc Bản</span>
+                            <span class="option-name">Khung Tranh 3D Tiệm Cà Phê Thanh Xuân</span>
+                            <span class="option-specs">Kích thước ≈ 25 × 20 cm • 8 Lớp Layer 3D • 2 Đèn LED rọi ấm</span>
+                          </div>
+                        </div>
+                        <span class="option-price">219.000đ</span>
                       </div>
                     </label>
                   </div>
@@ -391,12 +389,12 @@
             <h3 class="summary-title">Tóm Tắt Đơn Hàng</h3>
             <div class="summary-rows">
               <div class="summary-row">
-                <span id="summary-model-name">Mẫu 01: Góc Phố Ẩm Thực &amp; Trà Đá Hà Nội</span>
+                <span id="summary-model-name">Khung Tranh Tiệm Cà Phê Thanh Xuân</span>
                 <span id="summary-qty">x 1</span>
               </div>
               <div class="summary-row">
                 <span>Đơn giá</span>
-                <span id="summary-unit-price" class="highlight">150.000đ</span>
+                <span id="summary-unit-price" class="highlight">219.000đ</span>
               </div>
               <div class="summary-row">
                 <span>Phí vận chuyển</span>
@@ -406,7 +404,7 @@
 
             <div class="summary-total">
               <span class="summary-total-label">Tổng thanh toán:</span>
-              <span class="summary-total-amount" id="summary-total">150.000đ</span>
+              <span class="summary-total-amount" id="summary-total">219.000đ</span>
             </div>
 
             <div class="summary-guarantees">
@@ -659,6 +657,20 @@
       </div>
     </div>
   </footer>
+
+  <!-- ==================== LIGHTBOX PHÓNG TO ẢNH ==================== -->
+  <div class="image-lightbox" id="image-lightbox" role="dialog" aria-modal="true" aria-label="Xem ảnh phóng to">
+    <div class="lightbox-content">
+      <button type="button" class="lightbox-close-btn" id="lightbox-close-btn" aria-label="Đóng xem ảnh">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+          <line x1="18" y1="6" x2="6" y2="18"></line>
+          <line x1="6" y1="6" x2="18" y2="18"></line>
+        </svg>
+      </button>
+      <img class="lightbox-img" id="lightbox-img" src="" alt="Ảnh phóng to chi tiết">
+      <p class="lightbox-caption" id="lightbox-caption"></p>
+    </div>
+  </div>
 
   <!-- Modular Scripts -->
   <script type="module" src="js/main.js"></script>

@@ -4,9 +4,9 @@
  */
 
 const PRICES = {
-  'model-1': { name: 'Mẫu 01: Góc Phố Ẩm Thực & Trà Đá Hà Nội', unitPrice: 150000 },
-  'model-2': { name: 'Mẫu 02: Ký Ức Phố Hàng Đào', unitPrice: 150000 },
-  'combo-both': { name: 'Bộ đôi 2 mẫu (Ẩm Thực + Phố Hàng Đào)', unitPrice: 250000 }
+  'model-thanhxuan': { name: 'Khung Tranh Tiệm Cà Phê Thanh Xuân', unitPrice: 219000 },
+  'model-1': { name: 'Khung Tranh Tiệm Cà Phê Thanh Xuân', unitPrice: 219000 },
+  'model-2': { name: 'Khung Tranh Tiệm Cà Phê Thanh Xuân', unitPrice: 219000 }
 };
 
 // Cấu hình tài khoản ngân hàng nhận thanh toán VietQR
@@ -59,7 +59,7 @@ export function initOrder() {
 
   function getSelectedModelKey() {
     const checked = document.querySelector('input[name="product_model"]:checked');
-    return checked ? checked.value : 'model-1';
+    return checked ? checked.value : 'model-thanhxuan';
   }
 
   function getSelectedPaymentMethod() {
